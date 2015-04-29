@@ -22,16 +22,22 @@ import sys
 #    sock.close()
 
 
-def server(dispather, dict):
+def server(dispatcher, dict):
     writable = lambda x: False
 
     def __init__(self, host=None,port=31337):
-        dispather.__init__(self)
+        dispatcher.__init__(self)
 
         self.set_reuse_addr()
         self.bind((host, port))
         self.listen(0xA)
-        
+        self.get_message()
+
+
+    def handle_accept(self):
+        sock, (host,port) = self.accept()
+
+
 
 def main():
     try:
