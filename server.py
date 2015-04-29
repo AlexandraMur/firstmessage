@@ -2,6 +2,8 @@ import socket
 import asyncore
 import sys
 
+
+
 #sock = socket.socket()
 #sock.bind(('',31337))
 #sock.listen(10)
@@ -20,7 +22,16 @@ import sys
 #    sock.close()
 
 
+def server(dispather, dict):
+    writable = lambda x: False
 
+    def __init__(self, host=None,port=31337):
+        dispather.__init__(self)
+
+        self.set_reuse_addr()
+        self.bind((host, port))
+        self.listen(0xA)
+        
 
 def main():
     try:
