@@ -1,9 +1,9 @@
 import socket, select
 
 
-def broadcast(sock, message):
+def broadcast(s, message):
     for socket in CONNECTION_LIST:
-        if socket != sock and socket != sock:
+        if socket != sock and socket != s:
             try:
                 socket.send(message)
             except:
@@ -49,4 +49,3 @@ while 1:
                 continue
 
 sock.close()
-

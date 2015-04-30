@@ -19,6 +19,7 @@ except:
     sys.exit()
 
 print 'Lets get started sending messages :)'
+prompt()
 
 while 1:
     socket_list = [sys.stdin, sock]
